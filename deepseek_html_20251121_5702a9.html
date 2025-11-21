@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@histórias_dark - Roteiros Perfeitos para TikTok</title>
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --primary-dark: #6a1cb3;
+            --secondary: #ff4081;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #e0e0e0;
+            --gray: #333333;
+            --gray-light: #444444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Top Offer Banner */
+        .top-offer {
+            background: linear-gradient(45deg, #ff4081, #8a2be2, #ff4081);
+            background-size: 200% 200%;
+            padding: 12px 0;
+            text-align: center;
+            animation: gradientShift 3s ease infinite, pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .top-offer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .offer-text {
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .offer-timer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--darker);
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+        
+        .logo-icon {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(138, 43, 226, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            position: relative;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #ccc;
+        }
+        
+        /* Social Proof Section */
+        .social-proof {
+            padding: 40px 0;
+            background: var(--dark);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat p {
+            color: #aaa;
+        }
+        
+        .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .testimonial {
+            background: var(--darker);
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial span {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            background: var(--darker);
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .benefit {
+            text-align: center;
+            padding: 30px;
+            background: var(--dark);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .benefit h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(45deg, #ff4081, #8a2be2);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Form Progress */
+        .form-progress {
+            margin-bottom: 20px;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: var(--gray);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+        
+        /* Generator Section */
+        .generator {
+            padding: 60px 0;
+            background-color: var(--darker);
+        }
+        
+        .generator-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--gray);
+            background-color: var(--dark);
+            color: var(--light);
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .generate-btn {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+        }
+        
+        .generate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(138, 43, 226, 0.4);
+        }
+        
+        .generate-btn:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        /* Results Showcase */
+        .results-showcase {
+            padding: 60px 0;
+            background: var(--dark);
+        }
+        
+        .results-showcase h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .result-card {
+            background: var(--darker);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .before-after {
+            display: flex;
+        }
+        
+        .before, .after {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .before {
+            background: var(--gray);
+        }
+        
+        .after {
+            background: var(--primary);
+        }
+        
+        .before p, .after p {
+            font-weight: 600;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(138, 43, 226, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Result Section */
+        .result {
+            padding: 60px 0;
+            display: none;
+        }
+        
+        .result.active {
+            display: block;
+        }
+        
+        .script-container {
+            background-color: var(--darker);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+        
+        .script-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .script-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .copy-btn {
+            background-color: var(--gray);
+            color: var(--light);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .copy-btn:hover {
+            background-color: var(--gray-light);
+        }
+        
+        .script-content {
+            line-height: 1.8;
+            white-space: pre-line;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        
+        .upgrade-prompt {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .upgrade-prompt h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .upgrade-prompt p {
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        /* Plans Section */
+        .plans {
+            padding: 80px 0;
+            background-color: var(--darker);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .plans-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .plan-card {
+            background-color: var(--dark);
+            border-radius: 10px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan-card.free {
+            border: 2px solid var(--gray);
+        }
+        
+        .plan-card.premium {
+            border: 2px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .plan-card.premium:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .plan-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .discount-badge {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            background: #ff4081;
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .plan-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .plan-price.free {
+            color: var(--light);
+        }
+        
+        .plan-price.premium {
+            color: var(--primary);
+        }
+        
+        .plan-period {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-icon {
+            color: var(--primary);
+        }
+        
+        .feature-disabled {
+            color: #666;
+        }
+        
+        .feature-disabled .feature-icon {
+            color: #666;
+        }
+        
+        .plan-button {
+            display: block;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .plan-button.free {
+            background-color: var(--gray);
+            color: var(--light);
+        }
+        
+        .plan-button.free:hover {
+            background-color: var(--gray-light);
+        }
+        
+        .plan-button.premium {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+        }
+        
+        .plan-button.premium:hover {
+            background: linear-gradient(to right, var(--primary-dark), var(--primary));
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(138, 43, 226, 0.2);
+            border-radius: 8px;
+        }
+        
+        /* Urgency Counter */
+        .urgency-counter {
+            background: var(--dark);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid var(--primary);
+        }
+        
+        .spots-left {
+            background: linear-gradient(45deg, #ff4081, #8a2be2);
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--darker);
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--gray);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--gray);
+            border-radius: 50%;
+            color: var(--light);
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--gray);
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        .author {
+            text-align: center;
+            margin-top: 10px;
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+        
+        /* Exit Popup */
+        #exit-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #exit-popup.active {
+            display: flex;
+        }
+        
+        .popup-content {
+            background-color: var(--darker);
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .popup-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .exit-form {
+            margin-top: 20px;
+        }
+        
+        .exit-form input {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--gray);
+            background-color: var(--dark);
+            color: var(--light);
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+        
+        .exit-form button {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .plan-card.premium {
+                transform: scale(1);
+            }
+            
+            .plan-card.premium:hover {
+                transform: translateY(-10px);
+            }
+            
+            .stats {
+                gap: 30px;
+            }
+            
+            .stat h3 {
+                font-size: 2rem;
+            }
+            
+            .top-offer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .offer-text, .offer-timer {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Offer Banner -->
+    <div class="top-offer">
+        <div class="container">
+            <div class="top-offer-content">
+                <div class="offer-text">
+                    <span>🚨 OFERTA ESPECIAL:</span>
+                    <span>Plano Premium com 50% OFF</span>
+                </div>
+                <div class="offer-timer">
+                    <span>⏰ OFERTA TERMINA EM:</span>
+                    <span id="top-countdown">19:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📖</span>
+                    <div>
+                        <h1>@histórias_dark</h1>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#generator">Gerador</a></li>
+                        <li><a href="#plans">Planos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+                <a href="#plans" class="cta-button">
+                    <span>Experimente Grátis</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Descubra o Segredo dos Criadores que Viralizam no TikTok</h2>
+            <p>Gere roteiros que convertem seguidores em fãs engajados - <strong>sem precisar de criatividade</strong></p>
+            <a href="#generator" class="cta-button">
+                <span>Criar Meu Roteiro AGORA</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <h3>50K+</h3>
+                    <p>Roteiros Gerados</p>
+                </div>
+                <div class="stat">
+                    <h3>10K+</h3>
+                    <p>Usuários Satisfeitos</p>
+                </div>
+                <div class="stat">
+                    <h3>95%</h3>
+                    <p>Taxa de Aprovação</p>
+                </div>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Meus vídeos viralizaram depois que comecei a usar os roteiros! Ganhei 5K seguidores em uma semana!"</p>
+                    <span>- @creadora_de_conteudo</span>
+                </div>
+                <div class="testimonial">
+                    <p>"Finalmente consegui engajamento real no meu perfil. Os roteiros são incríveis!"</p>
+                    <span>- @conteudista_brasil</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Por que nossos roteiros convertem?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <span class="benefit-icon">🚀</span>
+                    <h3>Viralize Rapidamente</h3>
+                    <p>Estruturas comprovadas que engajam</p>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">💡</span>
+                    <h3>Ideias Únicas</h3>
+                    <p>Conteúdo original que se destaca</p>
+                </div>
+                <div class="benefit">
+                    <span class="benefit-icon">⏱️</span>
+                    <h3>Economize Tempo</h3>
+                    <p>Criação 3x mais rápida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section class="generator" id="generator">
+        <div class="container">
+            <div class="generator-container">
+                <div class="urgency-banner">
+                    <span>🔥 <strong>Oferta Especial:</strong> Complete o formulário agora e ganhe 2 roteiros extras!</span>
+                </div>
+                
+                <div class="form-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%"></div>
+                    </div>
+                    <p>Complete o formulário para gerar seu roteiro personalizado</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="storyType">Gênero da História</label>
+                    <select id="storyType">
+                        <option value="terror">Terror</option>
+                        <option value="romance">Romance</option>
+                        <option value="comedia">Comédia</option>
+                        <option value="drama">Drama</option>
+                        <option value="suspense">Suspense</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="storyTheme">Tema da História</label>
+                    <input type="text" id="storyTheme" placeholder="Ex: Fantasmas, Amor Proibido, Situações Engraçadas...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="storyDetails">Detalhes Adicionais</label>
+                    <textarea id="storyDetails" placeholder="Descreva com mais detalhes o que você quer na sua história..."></textarea>
+                </div>
+                
+                <button class="generate-btn" id="generateBtn">Gerar Meu Roteiro</button>
+                
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                    <p>Criando seu roteiro personalizado...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Showcase -->
+    <section class="results-showcase">
+        <div class="container">
+            <h2>Resultados Reais de Nossos Usuários</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="before-after">
+                        <div class="before">
+                            <p>Antes: 100 views</p>
+                        </div>
+                        <div class="after">
+                            <p>Depois: 50K views</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="before-after">
+                        <div class="before">
+                            <p>Antes: 200 seguidores</p>
+                        </div>
+                        <div class="after">
+                            <p>Depois: 15K seguidores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result" id="result">
+        <div class="container">
+            <div class="script-container">
+                <div class="script-header">
+                    <h3 class="script-title">Seu Roteiro Personalizado</h3>
+                    <button class="copy-btn" id="copyBtn">Copiar Roteiro</button>
+                </div>
+                <div class="script-content" id="scriptContent">
+                    <!-- O roteiro será inserido aqui via JavaScript -->
+                </div>
+            </div>
+            
+            <div class="upgrade-prompt">
+                <h3>Quer roteiros ilimitados?</h3>
+                <p>Atualize para o plano Premium e tenha acesso a roteiros ilimitados, suporte prioritário e recursos exclusivos!</p>
+                <a href="#plans" class="cta-button">Ver Planos Premium</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <div class="section-title">
+                <h2>Escolha Seu Plano</h2>
+                <p>Selecione o plano ideal para suas necessidades e comece a criar conteúdos virais</p>
+            </div>
+            
+            <div class="urgency-counter">
+                <p>⏰ <strong>Oferta termina em:</strong> <span id="countdown">19:00</span></p>
+            </div>
+            
+            <div class="spots-left">
+                <p>🚨 <strong>Últimas 5 vagas</strong> com preço promocional!</p>
+            </div>
+            
+            <div class="plans-container">
+                <div class="plan-card free">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Plano Gratuito</h3>
+                        <div class="plan-price free">R$ 0</div>
+                        <div class="plan-period">para sempre</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-icon">✓</span> 1 roteiro por dia</li>
+                        <li><span class="feature-icon">✓</span> Gêneros básicos</li>
+                        <li class="feature-disabled"><span class="feature-icon">✗</span> Roteiros personalizados</li>
+                        <li class="feature-disabled"><span class="feature-icon">✗</span> Suporte prioritário</li>
+                        <li class="feature-disabled"><span class="feature-icon">✗</span> Templates exclusivos</li>
+                    </ul>
+                    <a href="#generator" class="plan-button free">Começar Agora</a>
+                    <p class="plan-description"><strong>Experimente o poder</strong> dos nossos roteiros</p>
+                </div>
+                
+                <div class="plan-card premium">
+                    <div class="plan-badge">MAIS POPULAR</div>
+                    <div class="discount-badge">50% OFF</div>
+                    <div class="plan-header">
+                        <h3 class="plan-name">Plano Premium</h3>
+                        <div class="plan-price premium">R$ 29,90</div>
+                        <div class="plan-period">por mês</div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><span class="feature-icon">✓</span> Roteiros ilimitados</li>
+                        <li><span class="feature-icon">✓</span> Todos os gêneros</li>
+                        <li><span class="feature-icon">✓</span> Roteiros personalizados</li>
+                        <li><span class="feature-icon">✓</span> Suporte de vídeos virais</li>
+                        <li><span class="feature-icon">✓</span> Drive completo com templates</li>
+                    </ul>
+                    <a href="https://wa.me/5551989166847?text=Olá!%20Gostaria%20de%20assinar%20o%20Plano%20Premium%20de%20R$29,90%20do%20@histórias_dark" class="plan-button premium" target="_blank">Assinar Agora</a>
+                    <p class="plan-description"><strong>Domine o algoritmo</strong> do TikTok com roteiros ilimitados + Drive completo!</p>
+                </div>
+            </div>
+            
+            <div class="guarantee">
+                <span>✅ Garantia de 7 dias ou seu dinheiro de volta</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>@histórias_dark</h3>
+                    <p>Criando roteiros perfeitos para suas histórias no TikTok desde 2023.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">📹</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#generator">Gerador</a></li>
+                        <li><a href="#plans">Planos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Suporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 @histórias_dark. Todos os direitos reservados.</p>
+                <div class="author">
+                    <p>Criado por Guxtavo Xavier</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Exit Popup -->
+    <div id="exit-popup">
+        <div class="popup-content">
+            <h3>Espere! Não Vai Embora Sem Seu Roteiro Grátis</h3>
+            <p>Receba 1 roteiro personalizado gratuitamente ao se inscrever</p>
+            <form class="exit-form">
+                <input type="email" placeholder="Seu melhor email" required>
+                <button type="submit">Quero Meu Roteiro Grátis</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const generateBtn = document.getElementById('generateBtn');
+        const loading = document.getElementById('loading');
+        const resultSection = document.getElementById('result');
+        const scriptContent = document.getElementById('scriptContent');
+        const copyBtn = document.getElementById('copyBtn');
+        const countdownElement = document.getElementById('countdown');
+        const topCountdownElement = document.getElementById('top-countdown');
+        
+        // Contador regressivo - 19 minutos
+        let countdownTime = 19 * 60; // 19 minutos em segundos
+        
+        function updateCountdown() {
+            const minutes = Math.floor(countdownTime / 60);
+            const seconds = countdownTime % 60;
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            countdownElement.textContent = timeString;
+            topCountdownElement.textContent = timeString;
+            
+            if (countdownTime > 0) {
+                countdownTime--;
+            } else {
+                countdownElement.textContent = "00:00";
+                topCountdownElement.textContent = "00:00";
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Gerar roteiro
+        generateBtn.addEventListener('click', function() {
+            const storyType = document.getElementById('storyType').value;
+            const storyTheme = document.getElementById('storyTheme').value;
+            const storyDetails = document.getElementById('storyDetails').value;
+            
+            if (!storyTheme) {
+                alert('Por favor, preencha o tema da história!');
+                return;
+            }
+            
+            // Mostrar loading
+            loading.style.display = 'block';
+            generateBtn.disabled = true;
+            
+            // Simular processamento
+            setTimeout(() => {
+                // Gerar roteiro baseado nas entradas
+                const script = generateScript(storyType, storyTheme, storyDetails);
+                
+                // Mostrar resultado
+                scriptContent.textContent = script;
+                resultSection.classList.add('active');
+                loading.style.display = 'none';
+                generateBtn.disabled = false;
+                
+                // Rolar para a seção de resultado
+                resultSection.scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
+        });
+        
+        // Copiar roteiro
+        copyBtn.addEventListener('click', function() {
+            const textArea = document.createElement('textarea');
+            textArea.value = scriptContent.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            // Feedback visual
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = 'Copiado!';
+            setTimeout(() => {
+                copyBtn.textContent = originalText;
+            }, 2000);
+        });
+        
+        // Simular popup de saída
+        let mouseLeaving = false;
+        
+        document.addEventListener('mouseout', function(e) {
+            if (!mouseLeaving && e.clientY < 10) {
+                mouseLeaving = true;
+                setTimeout(() => {
+                    if (mouseLeaving) {
+                        exitPopup.classList.add('active');
+                    }
+                }, 500);
+            }
+        });
+        
+        document.addEventListener('mousemove', function(e) {
+            if (e.clientY > 50) {
+                mouseLeaving = false;
+            }
+        });
+        
+        // Fechar popup
+        exitPopup.addEventListener('click', function(e) {
+            if (e.target === exitPopup) {
+                exitPopup.classList.remove('active');
+            }
+        });
+        
+        // Função para gerar roteiros
+        function generateScript(type, theme, details) {
+            const scripts = {
+                terror: `ROTEIRO DE TERROR: ${theme.toUpperCase()}
+
+CENA 1 (0-5 segundos):
+- Ângulo: Close no seu rosto com expressão de medo
+- Efeito: Som de batidas fracas ao fundo
+- Legenda: "Eu não deveria ter ignorado os avisos..."
+
+CENA 2 (6-12 segundos):
+- Transição rápida para um local escuro
+- Efeito: Som de respiração ofegante
+- Legenda: "Agora estou preso aqui com... isso"
+
+CENA 3 (13-25 segundos):
+- Revelação do elemento de terror relacionado a ${theme}
+- Efeito: Barulho alto de susto
+- Legenda: "E ele sabe que eu estou aqui"
+
+DETALHES ADICIONAIS: ${details}
+
+DICA: Use iluminação baixa e filtros escuros para aumentar a tensão!`,
+
+                romance: `ROTEIRO ROMÂNTICO: ${theme.toUpperCase()}
+
+CENA 1 (0-7 segundos):
+- Ângulo: Close nos olhos com expressão suave
+- Efeito: Música romântica instrumental
+- Legenda: "Eu nunca acreditei no amor à primeira vista..."
+
+CENA 2 (8-18 segundos):
+- Transição para cena de encontro/conflito
+- Efeito: Mudança no tom da música
+- Legenda: "Até aquele dia em que nossos olhos se encontraram"
+
+CENA 3 (19-30 segundos):
+- Resolução emocional ou cliffhanger
+- Efeito: Música crescendo
+- Legenda: "E agora? O que vamos fazer?"
+
+DETALHES ADICIONAIS: ${details}
+
+DICA: Use transições suaves e cores quentes para criar atmosfera romântica!`,
+
+                comedia: `ROTEIRO DE COMÉDIA: ${theme.toUpperCase()}
+
+CENA 1 (0-6 segundos):
+- Ângulo: Expressão exagerada de confusão
+- Efeito: Som de comédia clássica
+- Legenda: "Quando você pensa que nada pode piorar..."
+
+CENA 2 (7-15 segundos):
+- Situação engraçada se desenvolvendo
+- Efeito: Risadas ao fundo
+- Legenda: "A vida te prega uma peça dessas!"
+
+CENA 3 (16-30 segundos):
+- Resolução cômica ou reviravolta
+- Efeito: Stinger de comédia
+- Legenda: "Moral da história: ${theme}"
+
+DETALHES ADICIONAIS: ${details}
+
+DICA: Exagere nas expressões faciais e use timing preciso para as piadas!`,
+
+                drama: `ROTEIRO DRAMÁTICO: ${theme.toUpperCase()}
+
+CENA 1 (0-8 segundos):
+- Ângulo: Close intenso no rosto
+- Efeito: Música dramática e suave
+- Legenda: "Às vezes as decisões mais difíceis..."
+
+CENA 2 (9-20 segundos):
+- Revelação do conflito dramático
+- Efeito: Música aumentando de intensidade
+- Legenda: "São aquelas que mudam tudo"
+
+CENA 3 (21-30 segundos):
+- Resolução emocional ou dilema
+- Efeito: Clímax musical
+- Legenda: "E agora eu tenho que viver com essa escolha"
+
+DETALHES ADICIONAIS: ${details}
+
+DICA: Use iluminação contrastante e close-ups para intensificar as emoções!`,
+
+                suspense: `ROTEIRO DE SUSPENSE: ${theme.toUpperCase()}
+
+CENA 1 (0-7 segundos):
+- Ângulo: Câmera instável, como se estivesse espiando
+- Efeito: Som de suspense crescente
+- Legenda: "Eu sabia que algo estava errado..."
+
+CENA 2 (8-18 segundos):
+- Revelação gradual da ameaça
+- Efeito: Batidas cardíacas ao fundo
+- Legenda: "Mas não imaginei que fosse tão perigoso"
+
+CENA 3 (19-30 segundos):
+- Cliffhanger ou reviravolta chocante
+- Efeito: Som agudo de tensão
+- Legenda: "E agora é tarde demais para voltar atrás"
+
+DETALHES ADICIONAIS: ${details}
+
+DICA: Use cortes rápidos e ângulos incomuns para manter a tensão!`
+            };
+            
+            return scripts[type] || scripts.terror;
+        }
+    </script>
+</body>
+</html>
